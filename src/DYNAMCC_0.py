@@ -279,10 +279,6 @@ def start_multiprocessing(new_dict, rules_dict, selection, codon_count, redundan
     best_result = None
 
     for result in output:
-
-        print result
-
-        reduced_list = result['BestReducedList']
         total_ratio = result['Ratio']
         reduced_size = result['ReduceSize']
 
@@ -294,10 +290,6 @@ def start_multiprocessing(new_dict, rules_dict, selection, codon_count, redundan
 
         BestReduceSize = best_result['ReduceSize']
         BestRatio = best_result['Ratio']
-
-    for key in best_result:
-
-        print key, best_result[key]
 
     return best_result
 

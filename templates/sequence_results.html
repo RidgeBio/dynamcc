@@ -1,0 +1,26 @@
+{% extends base.html %}
+{%block head%}
+{%end%}
+
+{% block content%}
+
+<body>
+
+<div class="row">
+  <h3>SEQUENCE</h3>
+</div>
+
+<div class= "row">
+
+<h5>Backbone: {{backbone}} </h5>
+<h5>Edits: {{edits}} </h5>
+<h5>The resulting compressed codons are optimized for usage in <em>{{organism}}</em> and were selected based on a cutoff {% if rank %} rank of {% else %} usage of {% end %} {{ threshold_value }} </h5>
+
+<h5>Sequences:</h5>
+	{% for sequence in sequences %}
+		{{sequence}} <br />
+	{% end %}
+</div>
+
+</body>
+{%end%}

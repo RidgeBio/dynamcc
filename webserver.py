@@ -44,6 +44,7 @@ from handlers.base_handlers import (
 )
 from handlers.dynamcc_handlers import (
     Dynamcc0Handler, DynamccRHandler, ExploderHandler, DynamccDHandler)
+from handlers.ridge_handlers import SequenceHandler
 
 
 class Application(tornado.web.Application):
@@ -59,6 +60,7 @@ class Application(tornado.web.Application):
              {"path": RES_PATH}),
             (r"/static/(.*)", tornado.web.StaticFileHandler,
              {"path": STATIC_PATH}),
+             (r"/sequence/", SequenceHandler),
             (r"/dynamcc_0/", Dynamcc0Handler),
             (r"/dynamcc_R/", DynamccRHandler),
             (r"/exploder/", ExploderHandler),
